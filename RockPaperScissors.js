@@ -22,9 +22,9 @@ function getComputerChoice(){
 // const ai = getComputerChoice();
 
 function playRound(playerSelection, computerSelection = getComputerChoice()){
-let rock = `rock`
-let paper = `paper`
-let scissors = `scissors`
+const rock = `rock`
+const paper = `paper`
+const scissors = `scissors`
     
 // if playerSelection == computerSelection
 // return `tie`
