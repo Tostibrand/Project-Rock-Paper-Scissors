@@ -26,26 +26,27 @@ function playRound(playerSelection, computerSelection = getComputerChoice()){
 const rock = `rock`
 const paper = `paper`
 const scissors = `scissors`
+
     
-if (playerSelection == computerSelection){
+if (playerSelection.toLowerCase() == computerSelection){
     return `tie`
 }
-else if(playerSelection == rock && computerSelection == paper){
+else if(playerSelection.toLowerCase() == rock && computerSelection == paper){
     return `paper beats rock, you lost!`
 }
-else if(playerSelection == paper && computerSelection == scissors){
+else if(playerSelection.toLowerCase() == paper && computerSelection == scissors){
     return `scissors beats paper, you lose!`
 }
-else if(playerSelection == scissors && computerSelection == rock){
+else if(playerSelection.toLowerCase() == scissors && computerSelection == rock){
     return `rock beats scissors, you lost!`
 }
-else if(playerSelection == rock && computerSelection == scissors){
+else if(playerSelection.toLowerCase() == rock && computerSelection == scissors){
     return `rock beats scissors, you won`
 }
-else if(playerSelection == scissors && computerSelection == paper){
+else if(playerSelection.toLowerCase() == scissors && computerSelection == paper){
     return `scissors beats paper, you won`
 }
-else if(playerSelection == paper && computerSelection == rock){
+else if(playerSelection.toLowerCase() == paper && computerSelection == rock){
     return `paper beats rock, you won`
 }
 }
