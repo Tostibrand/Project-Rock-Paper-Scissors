@@ -19,8 +19,8 @@ function getComputerChoice(){
         return scissors
     }
 }
-// const ai = getComputerChoice();
 
+// function playRound, added 2 parameters. defined getComputerChoice as the default option for computerSelection
 function playRound(playerSelection, computerSelection = getComputerChoice()){
 const rock = `rock`
 const paper = `paper`
