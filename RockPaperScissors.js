@@ -130,7 +130,7 @@ if (won > lost){
 {
     won = 0;
     lost = 0;
-    ties = 0;
+    tie = 0;
     round = 0;
     console.log(`Game reset`)
     console.log(`Thank you for playing!`)
