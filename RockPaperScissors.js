@@ -26,7 +26,7 @@ function getComputerChoice(){
 
 // FUNCTION PLAYROUND
 // all different outcomes to the game. Each out come updates the game status in between rounds
-function playRound(playerSelection = prompt(`Rock, paper or scissors?`), computerSelection = getComputerChoice()){
+function playRound(playerSelection = prompt(`Welcome, lets play a game of Rock, paper or scissors! put you answer down below and good luck!`), computerSelection = getComputerChoice()){
 const rock = `rock`
 const paper = `paper`
 const scissors = `scissors`
@@ -104,12 +104,17 @@ else if(playerSelection.toLowerCase() == paper && computerSelection == rock){
 }
 }
 
+
+
 // FUNCTION GAME
 function game(){
 // defines how many round there will be
 for(i = 0; i < 5; i++){
     playRound()
     }
+
+
+
 // evaluates the state of the game after 5 rounds and determines a winner
 if (won > lost){
     console.log(`Game over, you won!`)
@@ -118,13 +123,21 @@ if (won > lost){
 } else {
     console.log(`Game over, it's a tie!`)
 }
+
+
+
 // resets the game after the loop is finished
 {
     won = 0;
     lost = 0;
     ties = 0;
     round = 0;
+    console.log(`Game reset`)
+    console.log(`Thank you for playing!`)
 }
+
 }
+
+
 
 
