@@ -4,17 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="RockPaperScissors.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="RockPaperScissors.js"></script>
   </head>
   <body>
-    <h1>Welcome to rock paper scissors</h1>
-    <p>
-      to play press CTRL+shift+J to open up the browser console and type in:
-    </p>
-    <p>game()</p>
-    <p>
-      and hit enter, a popup will appear and the game starts! enjoy and thank
-      you for playing
-    </p>
+    <h1>Rock, Paper, Scissors</h1>
+    <div id="scoreboard">
+      <div id="roundsScoreboard">
+        <div id="rounds">Round</div>
+        <div id="roundScore">0</div>
+      </div>
+
+      <div id="yourScoreboard">
+        <div id="you">You</div>
+        <div id="yourScore">0</div>
+      </div>
+
+      <!-- <img id="vs" src="/images/Street_Fighter_VS_logo.png" alt="vs" /> -->
+
+      <div id="computerScoreboard">
+        <div id="computer">Computer</div>
+        <div id="computerScore">0</div>
+      </div>
+
+      <div id="tiesScoreboard">
+        <div id="tie">Ties</div>
+        <div id="tieScore">0</div>
+      </div>
+    </div>
+    <div id="text">Welcome, choose to start playing!</div>
+    <div id="playerSelection">
+      <img id="rockSelection" src="/images/rock.png" alt="rock" />
+      <img id="paperSelection" src="/images/paper.png" alt="paper" />
+      <img id="scissorsSelection" src="/images/scissors.png" alt="scissors" />
+      <button id="resetButton">Reset</button>
+    </div>
   </body>
 </html>
