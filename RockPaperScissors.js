@@ -60,64 +60,106 @@ function playRound(playerSelection, computerSelection = getComputerChoice()){
     const rock = `rock`
     const paper = `paper`
     const scissors = `scissors`
-
     if (won > lost && round == 5){
         text.textContent = `Game over, you won!`
     } else if (won < lost && round == 5){
         text.textContent = `Game over, you lost!`
     } else if (won == lost && round >= 5) {
         text.textContent =`Game over, it's a tie!`
-    }else {
+    } else{
+
         
     if (playerSelection.toLowerCase() == computerSelection){
             tie++;
             round++;
             tieScore.textContent = tie;   
             roundScore.textContent = round;
-            text.textContent = `It's a tie!`
+            
+            if (won > lost && round == 5){
+                text.textContent = `Game over, you won!`
+            } else if (won < lost && round == 5){
+                text.textContent = `Game over, you lost!`
+            } else if (won == lost && round >= 5) {
+                text.textContent =`Game over, it's a tie!`
+            }else {text.textContent = `It's a tie!`;
             return;
-    }
+    }}
     else if(playerSelection.toLowerCase() == rock && computerSelection == paper){
             lost++;
             round++;            
             computerScore.textContent = lost;
             roundScore.textContent = round;
-            text.textContent = `You lost!`                    
+            
+            if (won > lost && round == 5){
+                text.textContent = `Game over, you won!`
+            } else if (won < lost && round == 5){
+                text.textContent = `Game over, you lost!`
+            } else if (won == lost && round >= 5) {
+                text.textContent =`Game over, it's a tie!`
+            }else {text.textContent = `You lost!`;                 
             return;
-    }
+    }}
     else if(playerSelection.toLowerCase() == paper && computerSelection == scissors){
           lost++;
           round++;          
           computerScore.textContent = lost;
           roundScore.textContent = round;
+          if (won > lost && round == 5){
+            text.textContent = `Game over, you won!`
+        } else if (won < lost && round == 5){
+            text.textContent = `Game over, you lost!`
+        } else if (won == lost && round >= 5) {
+            text.textContent =`Game over, it's a tie!`
+        }else {
           text.textContent = `You lost!`
           return;
-    }
+    }}
     else if(playerSelection.toLowerCase() == scissors && computerSelection == rock){
           lost++;
           round++;         
           computerScore.textContent = lost; 
           roundScore.textContent = round;
+          if (won > lost && round == 5){
+            text.textContent = `Game over, you won!`
+        } else if (won < lost && round == 5){
+            text.textContent = `Game over, you lost!`
+        } else if (won == lost && round >= 5) {
+            text.textContent =`Game over, it's a tie!`
+        }else {
           text.textContent = `You lost!`
           return;
-    }
+    }}
     else if(playerSelection.toLowerCase() == rock && computerSelection == scissors){
           won++;
           round++;         
           yourScore.textContent = won;
           roundScore.textContent = round;
+          if (won > lost && round == 5){
+            text.textContent = `Game over, you won!`
+        } else if (won < lost && round == 5){
+            text.textContent = `Game over, you lost!`
+        } else if (won == lost && round >= 5) {
+            text.textContent =`Game over, it's a tie!`
+        }else {
           text.textContent = `You won!`
           return;
        
-    }
+    }}
     else if(playerSelection.toLowerCase() == scissors && computerSelection == paper){
           won++;
           round++;         
           yourScore.textContent = won;
           roundScore.textContent = round;
+          if (won > lost && round == 5){
+            text.textContent = `Game over, you won!`
+        } else if (won < lost && round == 5){
+            text.textContent = `Game over, you lost!`
+        } else if (won == lost && round >= 5) {
+            text.textContent =`Game over, it's a tie!`
+        }else {
           text.textContent = `You won!`
           return;
-    }
+    }}
     else if(playerSelection.toLowerCase() == paper && computerSelection == rock){
             won++;
             round++;           
