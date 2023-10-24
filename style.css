@@ -6,6 +6,7 @@ body{
     align-items: center;
     justify-content: center;
     font-family: 'Open Sans';
+    margin: auto;
 }
 #playerSelection{
     display: flex;
@@ -135,3 +136,42 @@ color: black;
     100% { opacity: 1 }
   }
 
+
+
+
+
+
+
+
+
+
+
+  /* Mobile viewport */
+@media only screen and (max-width: 600px) {
+    html{
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:100dvh ;
+        width: 80dvw;
+        scale: 0.50;
+        margin: auto;
+        padding-top: 100px;
+        
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+h1{
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+    #text{
+        font-size: 30px;
+        text-align: center;
+    }
+    }
