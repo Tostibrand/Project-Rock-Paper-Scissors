@@ -36,7 +36,7 @@ body{
     display: flex;
     width: 300px;
     justify-content: space-around;
-    margin: 100px;
+    margin: 10px;
 }
 /* score */
 #you, #computer, #tie, #rounds {
@@ -64,6 +64,18 @@ body{
 #yourScore, #computerScore, #roundScore, #tieScore, #text{
     font-size: 3em;
 }
+#computerScoreboard{
+    background-color: #fc0505;
+    border-radius: 10%;
+    margin: 10px;
+    color: black;
+}
+#yourScoreboard{
+background-color: #65c8d0;
+border-radius: 10%;
+margin: 10px;
+color: black;
+}
 #text{
     margin-bottom: 100px;
     height: 100px;
@@ -75,3 +87,51 @@ body{
     height: 10px;
     margin-left: 20px
 }
+#selectionHighlighter{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    width: 800px;
+    color: black;
+    margin-top: 50px;
+    
+}
+
+#selectionRock, #selectionPaper, #selectionScissors, #selectionReset, #youSelector, #computerSelector{
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    animation: playerSelectionIndicator 1s linear;
+}
+#selectionRock{
+    margin-left: 70px
+}
+#selectionPaper{
+    margin-left: 35px
+}
+#selectionScissors{
+    margin-left: 10px
+}
+#yourSelection{
+    height: 100px;
+}
+#selectionReset{
+    margin-right: 20px;
+}
+
+#selectorStartReset{
+    display: flex;
+    margin-bottom: 100px;
+}
+#youSelector, #computerSelector{
+    margin-right: 30px;
+    margin-left: 30px;
+}	
+  @keyframes playerSelectionIndicator {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+  }
+

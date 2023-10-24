@@ -15,12 +15,30 @@ const roundScore = document.querySelector(`#roundScore`)
 const tieScore = document.querySelector(`#tieScore`)
 const text = document.querySelector(`#text`)
 const resetButton = document.querySelector(`#resetButton`)
+// selectors
+const selectionRock = document.querySelector(`#selectionRock`)
+const selectionPaper = document.querySelector(`#selectionPaper`)
+const selectionScissors = document.querySelector(`#selectionScissors`)
+const selectionReset = document.querySelector(`#selectionReset`)
+const youSelector = document.querySelector(`#youSelector`)
+const computerSelector = document.querySelector(`#computerSelector`)
+
+const computerSelectionIndicator = new Image(70, 100);
+computerSelectionIndicator.src = "./images/computerSelector.png";
+
+
+const playerSelectionIndicator = new Image(70, 100);
+playerSelectionIndicator.src = "./images/youSelector.png";
+
+youSelector.append(playerSelectionIndicator);
+computerSelector.append(computerSelectionIndicator);
+
 
 
 // EVENT LISTENERS WHICH CALL PLAYROUND FUNCTION
-rock.addEventListener(`click`, () => {playRound(`rock`)})
-paper.addEventListener(`click`, () => {playRound(`paper`)})
-scissors.addEventListener(`click`, () => {playRound(`scissors`)})
+rock.addEventListener(`click`, () => {playRound(`rock`); selectionRock.append(playerSelectionIndicator);})
+paper.addEventListener(`click`, () => {playRound(`paper`); selectionPaper.append(playerSelectionIndicator);})
+scissors.addEventListener(`click`, () => {playRound(`scissors`); selectionScissors.append(playerSelectionIndicator);})
 resetButton.addEventListener(`click`, () => {resetGame()})
 
 // FUNCTION GETCOMPUTERCHOICE
@@ -33,10 +51,13 @@ function getComputerChoice(){
     const number = Math.floor(Math.random()*3) + 1;
     
     if (number == 1){
+        selectionRock.append(computerSelectionIndicator);
         return rock
     } else if (number == 2) { 
+        selectionPaper.append(computerSelectionIndicator);
         return paper
     } else {
+        selectionScissors.append(computerSelectionIndicator);
         return scissors
     }
 }
@@ -52,6 +73,10 @@ function resetGame(){
     yourScore.textContent = 0;
     computerScore.textContent = 0;
     tieScore.textContent = 0;
+
+    youSelector.append(playerSelectionIndicator);
+    computerSelector.append(computerSelectionIndicator);
+
 
 }
 // FUNCTION PLAYROUND
@@ -74,6 +99,7 @@ function playRound(playerSelection, computerSelection = getComputerChoice()){
             round++;
             tieScore.textContent = tie;   
             roundScore.textContent = round;
+
             
             if (won > lost && round == 5){
                 text.textContent = `Game over, you won!`
